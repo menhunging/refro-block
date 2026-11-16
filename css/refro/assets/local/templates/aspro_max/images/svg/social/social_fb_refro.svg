@@ -1,0 +1,12 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 13" width="7" height="13">
+	<title>BOTTOM</title>
+	<defs>
+		<image  width="7" height="13" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAANCAMAAABSF4SHAAAAAXNSR0IB2cksfwAAAGBQTFRFAAAA+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn55j9gKgAAACB0Uk5TAIbh+OB+/97PQzLVcy4136Yv97ckKKQW2IXcku+fy4eZSVy7AAAASUlEQVR4nFXKNwKAMAxDUWFA9IQWaoD73xLjjT/oLQKARNJMyampBcuqVhu2up3z7N0AWoLRnDAH4RJWfWzc8XXw/Bl5mXd8gBd+lQLt6UzQtQAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+	</style>
+	<g id="BOTTOM">
+		<use id="Layer 630" href="#img1" x="0" y="0" />
+	</g>
+</svg>
