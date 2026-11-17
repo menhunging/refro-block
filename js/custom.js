@@ -36,12 +36,22 @@ $(function () {
       });
     });
 
+    var $realized = $(".realized");
+
     new Swiper(".realized__slider", {
       slidesPerView: 3,
       spaceBetween: 16,
       speed: 400,
       watchOverflow: true,
       nested: true,
+      navigation: {
+        prevEl: $realized.find(".examples__prev")[0],
+        nextEl: $realized.find(".examples__next")[0],
+      },
+      pagination: {
+        el: $realized.find(".examples__dots")[0],
+        clickable: true,
+      },
       breakpoints: {
         0: {
           slidesPerView: 1,
@@ -57,17 +67,19 @@ $(function () {
   }
 
   if ($(".examples__slider").length) {
+    var $examples = $(".examples");
+
     new Swiper(".examples__slider", {
       slidesPerView: 4,
       spaceBetween: 16,
       speed: 400,
       watchOverflow: true,
       navigation: {
-        prevEl: ".examples__prev",
-        nextEl: ".examples__next",
+        prevEl: $examples.find(".examples__prev")[0],
+        nextEl: $examples.find(".examples__next")[0],
       },
       pagination: {
-        el: ".examples__dots",
+        el: $examples.find(".examples__dots")[0],
         clickable: true,
       },
       breakpoints: {

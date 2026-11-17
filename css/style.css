@@ -1096,6 +1096,14 @@
   background: #fff;
   border: 1px solid #d7d7d7;
 }
+@media (hover: hover) {
+  .realized .realized__card:hover .realized__dots {
+    opacity: 1;
+  }
+  .realized .realized__card:hover .realized__nav {
+    opacity: 1;
+  }
+}
 .realized .realized__gallery {
   position: relative;
   overflow: hidden;
@@ -1142,6 +1150,8 @@
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
   transform: translateY(-50%);
   cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 .realized .realized__nav::before {
   position: absolute;
@@ -1154,7 +1164,7 @@
   content: "";
 }
 .realized .realized__nav.swiper-button-disabled {
-  opacity: 1;
+  opacity: 0;
   cursor: default;
 }
 .realized .realized__prev {
@@ -1178,6 +1188,8 @@
   width: 100%;
   justify-content: center;
   gap: 6px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 .realized .realized__dots .swiper-pagination-bullet {
   width: var(--bar, 62px);
@@ -1276,35 +1288,38 @@
   object-fit: cover;
   border-radius: 16px;
 }
-.examples .examples__controls {
+
+.examples__controls {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 18px;
   margin-top: 22px;
 }
-.examples .examples__dots {
+
+.examples__dots {
   position: static;
   display: flex;
   align-items: center;
-  width: auto;
+  width: auto !important;
   gap: 6px;
   transform: none;
 }
-.examples .examples__dots .swiper-pagination-bullet {
+.examples__dots .swiper-pagination-bullet {
   width: 28px;
   height: 2px;
-  margin: 0;
+  margin: 0 !important;
   flex-shrink: 0;
   border-radius: 2px;
   background: #c8c8c8;
   opacity: 1;
   transition: width 0.3s, background-color 0.3s;
 }
-.examples .examples__dots .swiper-pagination-bullet-active {
+.examples__dots .swiper-pagination-bullet-active {
   background: #000;
 }
-.examples .examples__nav {
+
+.examples__nav {
   position: relative;
   display: block;
   width: 28px;
@@ -1315,7 +1330,7 @@
   background: transparent;
   cursor: pointer;
 }
-.examples .examples__nav::before {
+.examples__nav::before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1325,22 +1340,24 @@
   border-right: 1.5px solid #000;
   content: "";
 }
-.examples .examples__nav.swiper-button-disabled {
+.examples__nav.swiper-button-disabled {
   opacity: 1;
   cursor: default;
 }
-.examples .examples__nav.swiper-button-lock {
+.examples__nav.swiper-button-lock {
   display: block;
 }
 @media (hover: hover) {
-  .examples .examples__nav:hover {
+  .examples__nav:hover {
     opacity: 0.5;
   }
 }
-.examples .examples__prev::before {
+
+.examples__prev::before {
   transform: translate(-30%, -50%) rotate(-135deg);
 }
-.examples .examples__next::before {
+
+.examples__next::before {
   transform: translate(-70%, -50%) rotate(45deg);
 }
 
@@ -1920,6 +1937,7 @@
   }
   .design-project {
     margin: 32px 0;
+    padding: 16px;
   }
   .design-project .design-project__content h2 {
     font-size: 13px;
@@ -2168,17 +2186,17 @@
   .examples .examples__slider img {
     border-radius: 12px;
   }
-  .examples .examples__controls {
+  .examples__controls {
     gap: 12px;
     margin-top: 16px;
   }
-  .examples .examples__dots {
+  .examples__dots {
     gap: 4px;
   }
-  .examples .examples__dots .swiper-pagination-bullet {
-    width: 14px;
+  .examples__dots .swiper-pagination-bullet {
+    width: 12px;
   }
-  .examples .examples__dots .swiper-pagination-bullet-active {
+  .examples__dots .swiper-pagination-bullet-active {
     width: 28px;
   }
 }
